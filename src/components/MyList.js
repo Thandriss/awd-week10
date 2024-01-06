@@ -4,7 +4,7 @@ const MyList = (props) => {
         <h1>{props.header}</h1>
         <ol>
           {props.items.map((item)=> (
-            <li key={item.id} onClick={()=>props.updateItem(item.id)} style={{ textDecoration: item.clicked?'line-through': ''}}>{item.text}</li>
+            <li key={item.id} id={item.id} onClick={()=>props.updateItem(item.id)}>{item.text}</li>
           ))}
         </ol>
     </div>

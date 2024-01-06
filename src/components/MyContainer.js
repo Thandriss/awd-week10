@@ -12,6 +12,11 @@ const MyContainer = props => {
     for(let i=0; i< items.length; i++) {
       if(items[i].id === id) {
         items[i].clicked = !items[i].clicked;
+        if(items[i].clicked) {
+          document.getElementById(id).style.textDecoration = 'line-through'
+        } else {
+          document.getElementById(id).style.textDecoration = ''
+        }
       }
     }
     console.log(items)
